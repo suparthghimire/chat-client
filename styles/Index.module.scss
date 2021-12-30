@@ -1,0 +1,39 @@
+@import "./variables";
+.main_grid {
+    height: 100%;
+    display: grid;
+    width: 100%;
+    grid-template-columns: minmax(200px, 0.5fr) 1fr 1fr;
+    grid-template-rows: 80px 1fr;
+}
+
+.main_grid>* {
+    border: 2px solid red;
+}
+
+.nav_area {
+    grid-column: 1/-1;
+    border: 2px solid black;
+}
+
+.users_area {
+    display: none;
+    grid-column: 1/1;
+}
+
+.messages_area {
+    grid-column: 1/-1;
+}
+
+@media only screen and (min-width: $lg) {
+    .main_grid {
+        grid-template-columns: minmax(250px, 0.5fr) 1fr 1fr;
+    }
+    .users_area {
+        display: block;
+        grid-column: 1/1;
+    }
+    .messages_area {
+        grid-column: 2/-1;
+    }
+}
