@@ -1,8 +1,8 @@
-import { Nav, Navbar, NavDropdown, Container } from "react-bootstrap";
+import { Nav, Navbar, Offcanvas, Container } from "react-bootstrap";
 import UserInfo from "../partials/UserInfo";
 export default function NavBar() {
   return (
-    <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+    <Navbar collapseOnSelect expand="lg" bg="light" variant="light">
       <Container fluid>
         <Navbar.Brand href="#home">
           <UserInfo
@@ -11,13 +11,24 @@ export default function NavBar() {
             image_dim={50}
           />
         </Navbar.Brand>
-        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-        <Navbar.Collapse id="responsive-navbar-nav">
+        <Navbar.Toggle aria-controls="offcanvasNavbar" />
+        <div className="navbar-collapse collapse" id="responsive-navbar-nav">
           <Nav className="ms-auto">
             <Nav.Link>Profile</Nav.Link>
             <Nav.Link>Log Out</Nav.Link>
           </Nav>
-        </Navbar.Collapse>
+        </div>
+        <Navbar.Offcanvas>
+          <Offcanvas.Header closeButton>
+            <Offcanvas.Title>Chatter</Offcanvas.Title>
+          </Offcanvas.Header>
+          <Offcanvas.Body>
+            <Nav>
+              <Nav.Link>Profile</Nav.Link>
+              <Nav.Link>Log Out</Nav.Link>
+            </Nav>
+          </Offcanvas.Body>
+        </Navbar.Offcanvas>
       </Container>
     </Navbar>
   );

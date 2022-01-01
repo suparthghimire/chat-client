@@ -3,6 +3,7 @@ import { Row, Col } from "react-bootstrap";
 import NavBar from "../components/page/NavBar";
 import Users from "../components/page/Users";
 import Messages from "../components/page/Messages";
+import MessageForm from "../components/page/MessageForm";
 import styles from "../styles/Index.module.scss";
 export default function Home() {
   return (
@@ -16,8 +17,15 @@ export default function Home() {
         <div className={styles.nav_area}>
           <NavBar />
         </div>
-        <div className={styles.users_area}>{/* <Users /> */}hello</div>
-        <div className={styles.messages_area}>{/* <Messages /> */}hello</div>
+        <div className={`${styles.users_area} border-end`}>
+          <Users />
+        </div>
+        <div className={styles.messages_area}>
+          <Messages />
+        </div>
+        <div className={`${styles.input_area} border-top`}>
+          <MessageForm />
+        </div>
       </div>
     </div>
   );

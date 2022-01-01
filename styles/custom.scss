@@ -1,0 +1,10 @@
+@import "./variables";
+$primary: $blue;
+$secondary: $secondary;
+$success: $green !default;
+$info: $cyan;
+$warning: $yellow;
+$danger: $red;
+$light: $gray-100;
+$dark: $gray-900;
+@import "~bootstrap/scss/bootstrap";

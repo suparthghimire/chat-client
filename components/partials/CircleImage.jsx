@@ -7,6 +7,7 @@ export default function UserInfo(props) {
       alt={img_alt}
       width={dim}
       height={dim}
+      layout="intrinsic"
       className="ratio ratio-1x1 rounded-circle"
     />
   );

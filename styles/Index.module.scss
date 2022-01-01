@@ -3,37 +3,88 @@
     height: 100%;
     display: grid;
     width: 100%;
-    grid-template-columns: minmax(200px, 0.5fr) 1fr 1fr;
-    grid-template-rows: 80px 1fr;
+    grid-template-columns: 1fr;
+    grid-template-rows: 76px 1fr;
 }
 
-.main_grid>* {
-    border: 2px solid red;
+.main_grid {
+    min-height: 100vh;
 }
 
 .nav_area {
     grid-column: 1/-1;
-    border: 2px solid black;
 }
 
 .users_area {
     display: none;
     grid-column: 1/1;
+    grid-row: 2/4;
 }
 
 .messages_area {
     grid-column: 1/-1;
 }
 
+.user_item {
+    transition: all 150ms ease-in-out;
+}
+
+.user_item:hover {
+    background-color: #f1f1f1 !important;
+}
+
+.msg_item {
+    max-width: 450px;
+    border-radius: 10px;
+}
+
+.first_msg {
+    border-radius: 25px 25px 25px 5px;
+}
+
+.last_msg {
+    border-radius: 5px 25px 25px 25px;
+}
+
+.middle_msg {
+    border-radius: 5px 25px 25px 5px;
+}
+
+.single_msg {
+    border-radius: 25px 25px 25px 25px;
+}
+
+.circle_image {
+    width: 100%;
+    >div {
+        position: unset !important;
+    }
+    img {
+        object-fit: contain;
+        width: 100% !important;
+        position: relative !important;
+        height: unset !important;
+    }
+}
+
+.msg_item:hover .reaction_container {
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+}
+
 @media only screen and (min-width: $lg) {
     .main_grid {
-        grid-template-columns: minmax(250px, 0.5fr) 1fr 1fr;
+        grid-template-columns: 350px 1fr 1fr;
     }
     .users_area {
         display: block;
         grid-column: 1/1;
     }
     .messages_area {
+        grid-column: 2/-1;
+    }
+    .input_area {
         grid-column: 2/-1;
     }
 }
