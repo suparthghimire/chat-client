@@ -17,7 +17,7 @@ export default function UserItem({ user }) {
   return (
     <div
       role="button"
-      className={`py-3 px-3 bg-white my-3 rounded d-flex gap-3 align-items-center position-relative ${styles.user_item}`}
+      className={`py-3 px-3 text-white my-3 rounded d-flex gap-3 align-items-center position-relative bg-black ${styles.user_item}`}
     >
       <CircleImage img_src={user.image} img_alt={user.name} dim={40} />
       <div className="d-flex flex-column">

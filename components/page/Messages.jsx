@@ -141,8 +141,14 @@ export default function Messages(props) {
   return (
     <div className="h-100 px-3 py-0 list-unstyled">
       <ul
-        className="d-flex flex-column gap-1 list-unstyled pe-5 mt-2"
-        style={{ minHeight: "82vh", maxHeight: "82vh", overflowY: "auto" }}
+        className="d-flex flex-column gap-1 list-unstyled"
+        style={{
+          minHeight: "85vh",
+          maxHeight: "85vh",
+          overflowY: "auto",
+          margin: "0",
+          padding: "1rem 1rem 1rem 0",
+        }}
       >
         {messages.map((msg, index) => {
           return (
@@ -161,9 +167,6 @@ export default function Messages(props) {
               }
             />
           );
-          {
-            /* middle_msg={msg.sender.id !== messages[index]?.sender.id} */
-          }
         })}
       </ul>
     </div>

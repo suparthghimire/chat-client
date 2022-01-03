@@ -1,8 +1,10 @@
-import { Nav, Navbar, Offcanvas, Container } from "react-bootstrap";
+import { Nav, Navbar, Container } from "react-bootstrap";
 import UserInfo from "../partials/UserInfo";
+import MobileNavigation from "../partials/MobileNavigation";
+
 export default function NavBar() {
   return (
-    <Navbar collapseOnSelect expand="lg" bg="light" variant="light">
+    <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
       <Container fluid>
         <Navbar.Brand href="#home">
           <UserInfo
@@ -18,17 +20,7 @@ export default function NavBar() {
             <Nav.Link>Log Out</Nav.Link>
           </Nav>
         </div>
-        <Navbar.Offcanvas>
-          <Offcanvas.Header closeButton>
-            <Offcanvas.Title>Chatter</Offcanvas.Title>
-          </Offcanvas.Header>
-          <Offcanvas.Body>
-            <Nav>
-              <Nav.Link>Profile</Nav.Link>
-              <Nav.Link>Log Out</Nav.Link>
-            </Nav>
-          </Offcanvas.Body>
-        </Navbar.Offcanvas>
+        <MobileNavigation />
       </Container>
     </Navbar>
   );

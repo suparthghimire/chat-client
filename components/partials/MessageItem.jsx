@@ -19,11 +19,11 @@ export default function MessageItem({
       }`}
     >
       <div
-        className={`m-0 position-relative
+        className={`m-0 position-relative text-white
         ${styles.msg_item} ${
           msg.sender.id === my_id
-            ? `bg-light ${styles.msg_item_pull_right}`
-            : `bg-primary text-white`
+            ? `bg-dark ${styles.msg_item_pull_right}`
+            : `bg-danger text-white`
         } 
         ${first_msg && styles.first_msg}
         ${last_msg && styles.last_msg}
@@ -35,7 +35,7 @@ export default function MessageItem({
         <p className={`${styles.message_msg} m-0`}>{msg.msg}</p>
         <div
           role="button"
-          className={`position-absolute border d-none bg-white text-dark shadow-sm ${
+          className={`position-absolute  d-none bg-black text-dark shadow-sm ${
             styles.reaction_container
           } ${msg.sender.id === my_id ? "end-0" : "start-0"}`}
           style={{
@@ -45,7 +45,7 @@ export default function MessageItem({
             zIndex: "999",
           }}
         >
-          <EmojiLaughingFill />
+          <EmojiLaughingFill color="white" />
         </div>
       </div>
       {last_msg ? (

@@ -30,7 +30,11 @@
 }
 
 .user_item:hover {
-    background-color: #f1f1f1 !important;
+    background-color: $gray-900 !important;
+}
+
+.message_msg {
+    max-width: 250px;
 }
 
 .msg_item {
@@ -86,5 +90,8 @@
     }
     .input_area {
         grid-column: 2/-1;
+    }
+    .message_msg {
+        max-width: 500px;
     }
 }
